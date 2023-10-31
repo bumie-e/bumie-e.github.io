@@ -18,3 +18,33 @@ body {
 .subtopic {
     margin-left: 20px;
 }
+/* Styles for the left navigation */
+.nav {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+}
+
+/* Adjust the main content to account for the left navigation */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
