@@ -7,3 +7,14 @@
     text-align: center;
     cursor: pointer;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+.content-section {
+    margin-bottom: 20px;
+}
+.subtopic {
+    margin-left: 20px;
+}
