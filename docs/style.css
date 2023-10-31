@@ -75,4 +75,19 @@ body {
 .side-nav a:hover {
     color: #007BFF;
 }
+/* Styles for the back navigation */
+.back-nav {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.back-nav a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.back-nav a:hover {
+    color: #0056b3;
+}
 
