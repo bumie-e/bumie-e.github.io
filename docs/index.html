@@ -3,58 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Page</title>
+    <title>Courses</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        .content-section {
-            margin-bottom: 20px;
-        }
-        .subtopic {
-            margin-left: 20px;
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<!-- Course Title -->
-<div class="content-section">
-    <h1>Course Title: Introduction to Web Development</h1>
+<h1>Available Courses</h1>
+
+<!-- 6 cards for courses -->
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 1</h3>
+    <p>Details about course 1</p>
 </div>
 
-<!-- Course Content -->
-<div class="content-section">
-    <h2>Course Content</h2>
-    <p>This course will introduce you to the basics of web development, including HTML, CSS, and JavaScript.</p>
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 2</h3>
+    <p>Details about course 2</p>
 </div>
 
-<!-- Course Subtopics -->
-<div class="content-section">
-    <h2>Course Subtopics</h2>
-    <div class="subtopic">
-        <h3>Subtopic 1: HTML Basics</h3>
-        <p>Learn about the structure of an HTML document, elements, attributes, and more.</p>
-    </div>
-    <div class="subtopic">
-        <h3>Subtopic 2: CSS Styling</h3>
-        <p>Understand how to style your web pages using CSS properties, selectors, and values.</p>
-    </div>
-    <div class="subtopic">
-        <h3>Subtopic 3: JavaScript Fundamentals</h3>
-        <p>Dive into the world of JavaScript and learn about variables, functions, and events.</p>
-    </div>
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 3</h3>
+    <p>Details about course 3</p>
 </div>
 
-<!-- Navigation to Quiz Page -->
-<div class="content-section">
-    <a href="quiz.html">Go to Quiz Page</a>
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 4</h3>
+    <p>Details about course 4</p>
 </div>
 
-<!-- Navigation to Chatbot -->
-<div class="content-section">
-    <a href="chatbot.html">Chat with our Chatbot</a>
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 5</h3>
+    <p>Details about course 5</p>
+</div>
+
+<div class="card" onclick="location.href='index.html'">
+    <h3>Course 6</h3>
+    <p>Details about course 6</p>
 </div>
 
 </body>
