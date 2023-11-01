@@ -24,12 +24,12 @@ fetch(API_ENDPOINT, {
             const chapterDiv = document.createElement('div');
             
             // Create chapter title
-            const chapterHeader = document.createElement('h2');
+            const chapterHeader = document.getElementById('chapter');
             chapterHeader.textContent = chapterTitle;
             chapterDiv.appendChild(chapterHeader);
             
             // Create subtopics list for the chapter
-            const subtopicsList = document.createElement('ul');
+            const subtopicsList = document.getElementById('subtopics-list');
             data.message.chapter[chapterTitle].subtopics.forEach(subtopic => {
                 const listItem = document.createElement('li');
                 listItem.textContent = subtopic;
