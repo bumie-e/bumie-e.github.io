@@ -91,3 +91,23 @@ body {
     color: #0056b3;
 }
 
+/* Styles for the previous and next navigations */
+.prev-next-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev-next-nav a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.prev-next-nav a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
