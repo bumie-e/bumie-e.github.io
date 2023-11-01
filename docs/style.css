@@ -91,11 +91,12 @@ body {
     color: #0056b3;
 }
 
-/* Styles for the previous and next navigations */
+//* Styles for the previous and next navigations */
 .prev-next-nav {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .prev-next-nav a {
@@ -104,10 +105,13 @@ body {
     padding: 10px 20px;
     border: 1px solid #007BFF;
     transition: background-color 0.3s, color 0.3s;
+    flex: 1;  /* Allow the links to grow and take up equal space */
 }
 
-.prev-next-nav a:hover {
-    background-color: #007BFF;
-    color: #fff;
+.prev-next-nav a:first-child {
+    text-align: left;  /* Align the "Previous" link to the left */
 }
 
+.prev-next-nav a:last-child {
+    text-align: right;  /* Align the "Next" link to the right */
+}
