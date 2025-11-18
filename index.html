@@ -1,80 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bunmi Akinremi – Portfolio</title>
+  <title>Personal Portfolio — [Your Name]</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
 </head>
 <body>
-  <header class="header">
-    <div class="header-bg-shape">
-      <img src="assets/images/bg-hero-shape.svg" alt="Background shape decorative" />
-    </div>
-    <div class="header-inner">
-      <img src="assets/images/avatar.png" class="avatar" alt="Bunmi Akinremi" />
-      <div class="header-text">
-        <h1>Bunmi Akinremi</h1>
-        <p class="role">Machine Learning Engineer • Researcher • Speaker</p>
-        <p class="location">Lagos, Nigeria</p>
+
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1> [Your Name]</h1>
       </div>
+
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#speaking">Speaking</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section id="about" class="hero">
-      <div class="hero-text">
-        <h2>About Me</h2>
-        <p><!-- copy your about text from Canva here --></p>
-      </div>
-      <div class="hero-image">
-        <img src="assets/images/hero-graphic.png" alt="Hero graphic" />
-      </div>
-    </section>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h2 class="hello">Hello, I'm [Your Name]</h2>
+          <div class="title">Software Engineer &amp; AI Researcher</div>
+          <p class="lead">I build reliable, production-ready machine learning systems and beautiful developer tools. I focus on clear design, reproducible research, and scalable engineering.</p>
 
-    <section id="projects" class="card-section">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <div class="card project">
-          <img src="assets/images/project-pantry.png" alt="Pantry AI Generator" />
-          <h3>Pantry AI Generator</h3>
-          <p><!-- project description --></p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Get In Touch</a>
+            <a class="btn outline" href="#projects">See Projects</a>
+          </div>
         </div>
-        <div class="card project">
-          <img src="assets/images/project-sea-x.png" alt="Sea-X Waste Detection" />
-          <h3>Sea-X – Plastic Waste Detection</h3>
-          <p><!-- project description --></p>
+
+        <div class="hero-right">
+          <div class="portrait">Headshot</div>
         </div>
-        <!-- more project cards -->
       </div>
     </section>
 
-    <section id="experience" class="card-section">
-      <h2>Experience</h2>
-      <div class="card exp">
-        <h3>Kochava</h3>
-        <p>Machine Learning Engineer (Mar 2023 – Present)</p>
-        <p class="muted"><!-- description --></p>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+
+          <!-- Card 1 -->
+          <article class="card" aria-labelledby="p1">
+            <div class="screenshot">Screenshot</div>
+            <h3 id="p1">Project Alpha</h3>
+            <p class="desc">A compact description of the problem solved, the approach taken, and why it matters.</p>
+            <div class="tech-list">Python • React • TensorFlow</div>
+            <div class="links">
+              <a class="icon-btn" href="#">Live Demo</a>
+              <a class="icon-btn" href="#">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" aria-labelledby="p2">
+            <div class="screenshot">Screenshot</div>
+            <h3 id="p2">Project Beta</h3>
+            <p class="desc">Short description focusing on impact and metrics where possible.</p>
+            <div class="tech-list">PyTorch • FastAPI • Docker</div>
+            <div class="links">
+              <a class="icon-btn" href="#">Live Demo</a>
+              <a class="icon-btn" href="#">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" aria-labelledby="p3">
+            <div class="screenshot">Screenshot</div>
+            <h3 id="p3">Project Gamma</h3>
+            <p class="desc">Explain the key insight or novel engineering decision that made this project work.</p>
+            <div class="tech-list">Go • K8s • Redis</div>
+            <div class="links">
+              <a class="icon-btn" href="#">Live Demo</a>
+              <a class="icon-btn" href="#">GitHub</a>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <div class="card exp">
-        <h3>CJID</h3>
-        <p>Machine Learning Engineer (Apr 2024 – Aug 2024)</p>
-        <p class="muted"><!-- description --></p>
-      </div>
-      <!-- more experience items -->
     </section>
 
-    <section id="contact" class="card-section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:akinremibunmi111@gmail.com">akinremibunmi111@gmail.com</a></p>
-      <p>Phone: <a href="tel:+23481554005997">+234-815-5400-5997</a></p>
-      <p>GitHub: <a href="https://github.com/bumie-e" target="_blank">bumie-e</a></p>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+
+          <div class="role">
+            <h4>Software Engineer — ExampleCorp</h4>
+            <div class="meta">Jan 2023 — Present</div>
+            <ul>
+              <li>Built a forecasting pipeline that improved accuracy by X% using ensemble methods.</li>
+              <li>Designed and productionized microservices using Docker and Kubernetes.</li>
+              <li>Led cross-functional reviews and code-level mentoring.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h4>ML Research Intern — LabName</h4>
+            <div class="meta">Jun 2021 — Dec 2022</div>
+            <ul>
+              <li>Implemented reproducible training experiments and wrote evaluation scripts.</li>
+              <li>Authored a paper on model interpretability; open-sourced the codebase.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
     </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research &amp; Publications</h2>
+        <div class="list">
+          <article class="paper">
+            <h3>Example Paper Title</h3>
+            <div class="venue">Conference Name — 2024</div>
+            <p class="summary">A short abstract describing the main contribution and results. Keep this to one or two sentences for scanability.</p>
+            <a href="#" class="icon-btn" style="margin-top:10px;display:inline-block">PDF / arXiv</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEAKING -->
+    <section id="speaking">
+      <div class="container">
+        <h2 class="section-title">Speaking Engagements</h2>
+        <div class="list">
+          <div class="paper">
+            <h3>Behind the Scenes of an Ads Prediction System</h3>
+            <div class="venue">EuroPython — Prague • May 2025</div>
+            <a href="#" class="icon-btn" style="margin-top:10px;display:inline-block">Slides / Video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards">
+      <div class="container">
+        <h2 class="section-title">Awards &amp; Recognition</h2>
+        <div class="award-row">
+          <div class="award">
+            <div class="badge">1</div>
+            <div>
+              <div class="award-title">Best Student Paper</div>
+              <div class="meta">Conference Org • 2024</div>
+            </div>
+          </div>
+
+          <div class="award">
+            <div class="badge">🏅</div>
+            <div>
+              <div class="award-title">Hackathon Winner</div>
+              <div class="meta">Org • 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm always open to interesting collaborations, speaking opportunities, and new roles. Reach out —</p>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">gh</a>
+          <a href="#" aria-label="Twitter">tw</a>
+        </div>
+        <p style="margin-top:16px;opacity:0.85">email@example.com</p>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Bunmi Akinremi</p>
+  <footer>
+    <div class="container">© [Your Name] — Built with care · Designed for clarity</div>
   </footer>
+
 </body>
 </html>
