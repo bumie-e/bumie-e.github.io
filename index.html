@@ -1,207 +1,362 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personal Portfolio — [Your Name]</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olubunmi Akinremi — Harmattan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* THEME C — HARMATTAN
+       Pale parchment canvas · deep plum accent · antique copper highlight
+       The quiet, dusty elegance of harmattan mornings — intellectual, timeless, grounded. */
+    :root {
+      --cream: #F7F3EC; --warm-white: #EEEAD F; --ink: #1E1225; --ink-light: #3D2F4A;
+      --muted: #8C7E99; --terracotta: #6B2D6B; --terra-light: #B87333;
+      --forest: #6B2D6B; --border: #D8CDE0; --gold: #B87333;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: 'Crimson Pro', Georgia, serif; font-size: 18px; line-height: 1.75; overflow-x: hidden; }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(247,243,236,0.94); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5vw; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--terracotta); }
 
+    /* HERO — two column newspaper layout */
+    .hero {
+      min-height: 100vh; padding-top: 64px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8vh 5vw 8vh 8vw;
+      border-right: 1px solid var(--border);
+    }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1.5rem; opacity: 0; animation: fu 0.8s 0.2s forwards; }
+    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3.2rem, 6vw, 5.8rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 0.25em; opacity: 0; animation: fu 0.8s 0.4s forwards; }
+    .hero-name em { font-style: italic; color: var(--terracotta); }
+    .hero-subtitle { font-size: 1.25rem; font-style: italic; font-weight: 300; color: var(--muted); margin-bottom: 2rem; opacity: 0; animation: fu 0.8s 0.6s forwards; }
+    .hero-body { font-size: 1.05rem; color: var(--ink-light); max-width: 440px; line-height: 1.85; margin-bottom: 2.5rem; opacity: 0; animation: fu 0.8s 0.8s forwards; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fu 0.8s 1s forwards; }
+    .btn-fill { background: var(--terracotta); color: #fff; padding: 0.72rem 1.8rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-fill:hover { background: var(--ink); transform: translateY(-2px); }
+    .btn-line { border: 1px solid var(--ink); color: var(--ink); padding: 0.72rem 1.8rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-line:hover { background: var(--ink); color: var(--cream); }
+    .btn-fill { background: var(--terracotta) !important; }
+    .btn-fill:hover { background: #4e1f4e !important; }
+    .hero-name em { color: var(--terracotta) !important; }
+    .hero-eyebrow { color: var(--terracotta) !important; }
+    .em-company { color: var(--terracotta) !important; }
+    .sn { color: var(--terracotta) !important; }
+    .stat-n { color: var(--terracotta) !important; }
+    .ec-bullets li::before { color: var(--gold) !important; }
+    .pub-item .pv { color: var(--gold) !important; }
+    .pc-date { color: var(--terracotta) !important; }
+    .pc::before { background: linear-gradient(to right, var(--terracotta), var(--gold)) !important; }
+    .about-text p:first-child::first-letter { color: var(--terracotta) !important; }
+    .contact-cols .ch em { color: var(--terracotta) !important; }
+    .contact-cols .ck { color: var(--gold) !important; }
+    #contact { background: var(--ink); }
+    #contact .st { color: #F7F3EC; }
+    #contact .sn { color: var(--gold) !important; }
+    #contact .ch { color: #F7F3EC; }
+    #contact .cd { color: rgba(247,243,236,0.65); }
+    #contact .crow { border-bottom-color: rgba(247,243,236,0.12); }
+    #contact .cv { color: #F7F3EC; }
+    #contact .cv:hover { color: var(--gold); }
+    footer { background: var(--ink); }
+    footer p { color: rgba(247,243,236,0.3); }
+    .nav-links a:hover { color: var(--terracotta) !important; }
+    .photo-corner { border-color: var(--terracotta) !important; }
+    .photo-placeholder::before { background: linear-gradient(135deg, rgba(107,45,107,0.07) 0%, transparent 55%), repeating-linear-gradient(45deg, transparent, transparent 14px, rgba(107,45,107,0.04) 14px, rgba(107,45,107,0.04) 15px) !important; }
+
+    .hero-right { display: flex; flex-direction: column; justify-content: center; padding: 8vh 8vw 8vh 5vw; gap: 0; }
+
+    /* PHOTO PLACEHOLDER */
+    .photo-wrap {
+      position: relative; margin-bottom: 2.5rem;
+      opacity: 0; animation: fu 0.8s 0.4s forwards;
+    }
+    .photo-placeholder {
+      width: 100%; aspect-ratio: 3 / 4; max-height: 360px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 1rem; position: relative; overflow: hidden;
+    }
+    .photo-placeholder::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(196,98,45,0.06) 0%, transparent 60%),
+                  repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(196,98,45,0.04) 12px, rgba(196,98,45,0.04) 13px);
+    }
+    .photo-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--border); display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 1;
+    }
+    .photo-icon svg { width: 34px; height: 34px; fill: var(--muted); }
+    .photo-label {
+      font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); position: relative; z-index: 1;
+    }
+    .photo-corner {
+      position: absolute; width: 20px; height: 20px; border-color: var(--terracotta); border-style: solid;
+    }
+    .photo-corner.tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; }
+    .photo-corner.tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; }
+    .photo-corner.bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; }
+    .photo-corner.br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
+    /* When real photo is used, just swap src on the img tag */
+    .photo-placeholder img { width: 100%; height: 100%; object-fit: cover; display: none; }
+
+    .stat-row { padding: 1.5rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: baseline; opacity: 0; animation: fu 0.7s forwards; }
+    .stat-row:first-child { border-top: 1px solid var(--border); animation-delay: 0.5s; }
+    .stat-row:nth-child(2) { animation-delay: 0.7s; }
+    .stat-row:nth-child(3) { animation-delay: 0.9s; }
+    .stat-row:nth-child(4) { animation-delay: 1.1s; }
+    .stat-n { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--ink); }
+    .stat-l { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: right; max-width: 160px; line-height: 1.5; }
+
+    /* SECTIONS */
+    section { padding: 8vh 8vw; border-top: 1px solid var(--border); }
+    .sh { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 4rem; }
+    .sn { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--terracotta); }
+    .st { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.05; }
+
+    /* ABOUT */
+    .about-cols { display: grid; grid-template-columns: 3fr 2fr; gap: 5vw; }
+    .about-text p { font-size: 1.1rem; color: var(--ink-light); margin-bottom: 1.2rem; line-height: 1.9; }
+    .about-text p:first-child::first-letter { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; float: left; line-height: 0.82; margin-right: 0.08em; color: var(--terracotta); }
+    .sidebar-box { background: var(--warm-white); border: 1px solid var(--border); padding: 2rem; }
+    .sidebar-box h3 { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
+    .skill-cat { margin-bottom: 1.2rem; }
+    .skill-cat-name { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.06em; padding: 0.22rem 0.6rem; border: 1px solid var(--border); color: var(--ink-light); background: var(--cream); }
+
+    /* EXP */
+    .exp-item { display: grid; grid-template-columns: 200px 1fr; gap: 3vw; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    .exp-item:first-child { border-top: 1px solid var(--border); }
+    .em-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.4rem; }
+    .em-company { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--terracotta); }
+    .em-loc { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.08em; }
+    .ec-role { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem; }
+    .ec-bullets { list-style: none; }
+    .ec-bullets li { font-size: 0.98rem; color: var(--ink-light); padding-left: 1.2rem; position: relative; margin-bottom: 0.65rem; line-height: 1.75; }
+    .ec-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--terracotta); }
+    .hl { font-weight: 500; color: var(--ink); }
+
+    /* PROJECTS */
+    .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; }
+    .pc { background: var(--warm-white); border: 1px solid var(--border); padding: 2.5rem; position: relative; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
+    .pc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--terracotta); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+    .pc:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .pc:hover::before { transform: scaleX(1); }
+    .pc-date { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; color: var(--terracotta); text-transform: uppercase; margin-bottom: 0.7rem; }
+    .pc-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+    .pc-stack { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); margin-bottom: 0.8rem; letter-spacing: 0.05em; }
+    .pc-desc { font-size: 0.95rem; color: var(--ink-light); line-height: 1.75; }
+
+    /* PUBS */
+    .pub-item { display: flex; gap: 2rem; align-items: baseline; padding: 1.8rem 0; border-bottom: 1px solid var(--border); }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    .pv { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--terracotta); text-transform: uppercase; min-width: 130px; flex-shrink: 0; }
+    .pt { font-family: 'Crimson Pro', serif; font-size: 1.08rem; font-style: italic; color: var(--ink); line-height: 1.55; }
+
+    /* SPEAKING */
+    .talk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+    .tc { padding: 2rem; background: var(--warm-white); border: 1px solid var(--border); }
+    .te { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+    .td { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.7rem; }
+    .tt { font-size: 0.98rem; font-style: italic; color: var(--ink-light); line-height: 1.65; }
+
+    /* AWARDS */
+    .awards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .aw { padding: 2rem; border: 1px solid var(--border); margin: -1px -1px 0 0; transition: background 0.2s; }
+    .aw:hover { background: var(--warm-white); }
+    .aw-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.35rem; }
+    .aw-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+
+    /* CONTACT */
+    #contact { background: var(--ink); }
+    #contact .sn { color: var(--terra-light); }
+    #contact .st { color: var(--cream); }
+    .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: start; }
+    .ch { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; line-height: 1.15; color: var(--cream); margin-bottom: 1rem; }
+    .ch em { font-style: italic; color: var(--terra-light); }
+    .cd { font-size: 1.05rem; color: rgba(245,240,232,0.65); line-height: 1.85; }
+    .clinks { display: flex; flex-direction: column; gap: 0; }
+    .crow { padding: 1.4rem 0; border-bottom: 1px solid rgba(245,240,232,0.12); display: flex; flex-direction: column; gap: 0.2rem; }
+    .crow:last-child { border-bottom: none; }
+    .ck { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terra-light); }
+    .cv { font-size: 1.08rem; color: var(--cream); text-decoration: none; transition: color 0.2s; }
+    .cv:hover { color: var(--terra-light); }
+
+    footer { background: var(--ink); border-top: 1px solid rgba(245,240,232,0.1); padding: 1.5rem 8vw; display: flex; justify-content: space-between; }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.3); }
+
+    @keyframes fu { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
+    .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.7s, transform 0.7s; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    @media(max-width:768px){
+      .hero,.about-cols,.contact-cols { grid-template-columns:1fr; }
+      .exp-item { grid-template-columns:1fr; gap:0.5rem; }
+      .awards-grid { grid-template-columns:1fr; }
+      .hero-left { border-right:none; border-bottom:1px solid var(--border); }
+      nav .nav-links { display:none; }
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#" class="nav-logo">Olubunmi Akinremi</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header>
-    <div class="container nav-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1> [Your Name]</h1>
-      </div>
-
-      <nav aria-label="Primary Navigation">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#speaking">Speaking</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="hero" style="border-top:none; padding:0;">
+    <div class="hero-left">
+      <p class="hero-eyebrow">AI Engineer · Researcher · Speaker</p>
+      <h1 class="hero-name">Olubunmi<br><em>Akinremi</em></h1>
+      <p class="hero-subtitle">Building intelligent systems at the frontier of NLP, MLOps &amp; GenAI</p>
+      <p class="hero-body">AI Engineer at Bfree Africa · Adjunct Faculty at PAU · Incoming Research Intern at LiGHT, EPFL · ELLIS PhD Shortlistee — with roots in Lagos and impact across continents.</p>
+      <div class="hero-ctas"><a href="#experience" class="btn-fill">View My Work</a><a href="mailto:akinremibunmi111@gmail.com" class="btn-line">Get In Touch</a></div>
     </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section id="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <h2 class="hello">Hello, I'm [Your Name]</h2>
-          <div class="title">Software Engineer &amp; AI Researcher</div>
-          <p class="lead">I build reliable, production-ready machine learning systems and beautiful developer tools. I focus on clear design, reproducible research, and scalable engineering.</p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#contact">Get In Touch</a>
-            <a class="btn outline" href="#projects">See Projects</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="portrait">Headshot</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-
-          <!-- Card 1 -->
-          <article class="card" aria-labelledby="p1">
-            <div class="screenshot">Screenshot</div>
-            <h3 id="p1">Project Alpha</h3>
-            <p class="desc">A compact description of the problem solved, the approach taken, and why it matters.</p>
-            <div class="tech-list">Python • React • TensorFlow</div>
-            <div class="links">
-              <a class="icon-btn" href="#">Live Demo</a>
-              <a class="icon-btn" href="#">GitHub</a>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card" aria-labelledby="p2">
-            <div class="screenshot">Screenshot</div>
-            <h3 id="p2">Project Beta</h3>
-            <p class="desc">Short description focusing on impact and metrics where possible.</p>
-            <div class="tech-list">PyTorch • FastAPI • Docker</div>
-            <div class="links">
-              <a class="icon-btn" href="#">Live Demo</a>
-              <a class="icon-btn" href="#">GitHub</a>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card" aria-labelledby="p3">
-            <div class="screenshot">Screenshot</div>
-            <h3 id="p3">Project Gamma</h3>
-            <p class="desc">Explain the key insight or novel engineering decision that made this project work.</p>
-            <div class="tech-list">Go • K8s • Redis</div>
-            <div class="links">
-              <a class="icon-btn" href="#">Live Demo</a>
-              <a class="icon-btn" href="#">GitHub</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="timeline">
-
-          <div class="role">
-            <h4>Software Engineer — ExampleCorp</h4>
-            <div class="meta">Jan 2023 — Present</div>
-            <ul>
-              <li>Built a forecasting pipeline that improved accuracy by X% using ensemble methods.</li>
-              <li>Designed and productionized microservices using Docker and Kubernetes.</li>
-              <li>Led cross-functional reviews and code-level mentoring.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <h4>ML Research Intern — LabName</h4>
-            <div class="meta">Jun 2021 — Dec 2022</div>
-            <ul>
-              <li>Implemented reproducible training experiments and wrote evaluation scripts.</li>
-              <li>Authored a paper on model interpretability; open-sourced the codebase.</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research">
-      <div class="container">
-        <h2 class="section-title">Research &amp; Publications</h2>
-        <div class="list">
-          <article class="paper">
-            <h3>Example Paper Title</h3>
-            <div class="venue">Conference Name — 2024</div>
-            <p class="summary">A short abstract describing the main contribution and results. Keep this to one or two sentences for scanability.</p>
-            <a href="#" class="icon-btn" style="margin-top:10px;display:inline-block">PDF / arXiv</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPEAKING -->
-    <section id="speaking">
-      <div class="container">
-        <h2 class="section-title">Speaking Engagements</h2>
-        <div class="list">
-          <div class="paper">
-            <h3>Behind the Scenes of an Ads Prediction System</h3>
-            <div class="venue">EuroPython — Prague • May 2025</div>
-            <a href="#" class="icon-btn" style="margin-top:10px;display:inline-block">Slides / Video</a>
+    <div class="hero-right">
+      <div class="photo-wrap">
+        <div class="photo-placeholder">
+          <div class="photo-corner tl"></div>
+          <div class="photo-corner tr"></div>
+          <div class="photo-corner bl"></div>
+          <div class="photo-corner br"></div>
+          <!-- Replace the placeholder below with: <img src="your-photo.jpg" style="display:block;" alt="Olubunmi Akinremi"> -->
+          <div class="photo-icon">
+            <img src="assets/Bunmi_Picture3 profile.jpeg" alt="Photo Icon">
           </div>
         </div>
       </div>
-    </section>
+      <div class="stat-row"><span class="stat-n">3+</span><span class="stat-l">Years in Production ML</span></div>
+      <div class="stat-row"><span class="stat-n">£70k</span><span class="stat-l">Research Grant Awarded</span></div>
+      <div class="stat-row"><span class="stat-n">Top 10</span><span class="stat-l">NASA Space Apps Globally in 2022</span></div>
+      <div class="stat-row"><span class="stat-n">5+</span><span class="stat-l">Publications &amp; Articles</span></div>
+    </div>
+  </div>
 
-    <!-- AWARDS -->
-    <section id="awards">
-      <div class="container">
-        <h2 class="section-title">Awards &amp; Recognition</h2>
-        <div class="award-row">
-          <div class="award">
-            <div class="badge">1</div>
-            <div>
-              <div class="award-title">Best Student Paper</div>
-              <div class="meta">Conference Org • 2024</div>
-            </div>
-          </div>
-
-          <div class="award">
-            <div class="badge">🏅</div>
-            <div>
-              <div class="award-title">Hackathon Winner</div>
-              <div class="meta">Org • 2023</div>
-            </div>
-          </div>
-        </div>
+  <section id="about">
+    <div class="sh reveal"><span class="sn">01</span><h2 class="st">About</h2></div>
+    <div class="about-cols">
+      <div class="about-text reveal">
+        <p>I'm an AI Engineer specialising in NLP, ads analytics, statistical modelling, and responsible AI. Currently I work as AI Engineer at <strong>Bfree Africa</strong>, building intelligent systems for financial services, and as Adjunct Faculty at <strong>Pan-Atlantic University</strong>. In March 2026, I begin a research internship at <strong>LiGHT, EPFL</strong> in Switzerland — and I've been shortlisted for the prestigious <strong>ELLIS PhD Programme</strong>, one of Europe's most competitive doctoral tracks in AI.</p>
+        <p>My research in reinforcement learning explores how agents learn to collaborate in mixed-motive environments — theory, ethics, and real-world deployment in one question. I've spoken at AMLD Africa, TEDx, Python Summit Warsaw, and ML Lagos, and I review papers for ICLR and ECCV workshops.</p>
+        <p>Being introverted has shaped how deliberately I communicate and how deeply I think. Quiet confidence, consequential work.</p>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p>I'm always open to interesting collaborations, speaking opportunities, and new roles. Reach out —</p>
-        <div class="socials" aria-label="Social links">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">gh</a>
-          <a href="#" aria-label="Twitter">tw</a>
-        </div>
-        <p style="margin-top:16px;opacity:0.85">email@example.com</p>
+      <div class="sidebar-box reveal">
+        <h3>Core Expertise</h3>
+        <div class="skill-cat"><div class="skill-cat-name">NLP &amp; GenAI</div><div class="tags"><span class="tag">LLMs</span><span class="tag">BERT</span><span class="tag">Whisper</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Fine-tuning</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-name">MLOps &amp; Cloud</div><div class="tags"><span class="tag">Kubeflow</span><span class="tag">Kubernetes</span><span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GCP</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-name">Responsible AI</div><div class="tags"><span class="tag">Red Teaming</span><span class="tag">RLHF</span><span class="tag">Bias Mitigation</span><span class="tag">SHAP/LIME</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-name">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">JAX</span></div></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section id="experience">
+    <div class="sh reveal"><span class="sn">02</span><h2 class="st">Experience</h2></div>
+    <div class="exp-item reveal"><div><div class="em-date">Mar 2026 — Present</div><div class="em-company">LiGHT, EPFL</div><div class="em-loc">Switzerland</div></div><div><div class="ec-role">Research Intern</div><ul class="ec-bullets"><li>Conducting research at the <strong>Laboratory for Intelligent Global Health Technologies (LiGHT)</strong> at EPFL — one of Europe's leading AI research institutions — working at the intersection of AI and global health impact.</li></ul></div></div>
+    <div class="exp-item reveal"><div><div class="em-date">2026 — Present</div><div class="em-company">Bfree Africa</div><div class="em-loc">Lagos, Nigeria</div></div><div><div class="ec-role">AI Engineer</div><ul class="ec-bullets"><li>Building intelligent AI systems for African financial services, focusing on scalable NLP and decision-support infrastructure.</li></ul></div></div>
+    <div class="exp-item reveal"><div><div class="em-date">2026 — Present</div><div class="em-company">Pan-Atlantic University</div><div class="em-loc">Lagos, Nigeria</div></div><div><div class="ec-role">Adjunct Faculty</div><ul class="ec-bullets"><li>Teaching and mentoring the next wave of AI practitioners, translating frontier research into applied curriculum for African students.</li></ul></div></div>
+    <div class="exp-item reveal"><div><div class="em-date">Mar 2023 — Jan 2026</div><div class="em-company">Kochava</div><div class="em-loc">US, Remote</div></div><div><div class="ec-role">Machine Learning Engineer</div><ul class="ec-bullets"><li><span class="hl">50% faster training</span> — distributed training system on Kubernetes resolving critical CPU bottlenecks</li><li><span class="hl">50% forecast accuracy gain</span> — replaced legacy models with LLM-based Chronos architecture, cutting modelling time by 30%</li><li><span class="hl">95% anomaly detection accuracy</span> — automated data quality assurance pipeline</li><li><span class="hl">40% faster client onboarding</span> — Kubeflow pipeline for notebook-to-production deployment</li></ul></div></div>
+    <div class="exp-item reveal"><div><div class="em-date">Apr — Aug 2024</div><div class="em-company">CJID</div><div class="em-loc">Abuja, Nigeria</div></div><div><div class="ec-role">ML Engineer — GenAI &amp; LLMs</div><ul class="ec-bullets"><li><span class="hl">70% reduction in manual labour</span> — organisation's first GenAI platform for local language audio transcription</li><li>Fine-tuned BERT and Whisper on African datasets for fake news detection</li></ul></div></div>
+    <div class="exp-item reveal"><div><div class="em-date">Sep 2022 — Feb 2023</div><div class="em-company">Rural Farmers Hub</div><div class="em-loc">Abuja, Nigeria</div></div><div><div class="ec-role">Machine Learning Engineer</div><ul class="ec-bullets"><li><span class="hl">25% faster GIS analysis</span> via Computer Vision + OpenCV on satellite imagery</li><li><span class="hl">20% accuracy improvement</span> — custom ML Soil Organic Matter estimator</li></ul></div></div>
+  </section>
 
-  <footer>
-    <div class="container">© [Your Name] — Built with care · Designed for clarity</div>
-  </footer>
+  <section id="projects">
+    <div class="sh reveal"><span class="sn">03</span><h2 class="st">Projects</h2></div>
+    <div class="proj-grid">
+      <div class="pc reveal"><div class="pc-date">Sep–Oct 2025</div><div class="pc-name">Multimodal Recipe Recommendation Engine</div><div class="pc-stack">React · FastAPI · YOLOv8n · Groq · Tailwind</div><p class="pc-desc">Production-ready multimodal AI combining YOLOv8 vision and LLMs to analyse cooking videos and generate contextual recipe recommendations.</p></div>
+      <div class="pc reveal"><div class="pc-date">Oct 2024</div><div class="pc-name">Autonomous Data Extraction Agent</div><div class="pc-stack">BeautifulSoup · Azure · GitHub Actions · Blob Storage</div><p class="pc-desc">Scheduled autonomous scraping agent with automated versioning in Azure Blob Storage, built entirely on Python and GitHub Actions CI/CD.</p></div>
+      <div class="pc reveal"><div class="pc-date">Nov 2023</div><div class="pc-name">RAG-based Knowledge Retrieval System</div><div class="pc-stack">LangChain · Azure · GPT-3.5 · VectorDB · JavaScript</div><p class="pc-desc">Retrieval-Augmented Generation app on Azure. 50% faster retrieval speeds with seamless Azure OpenAI integration.</p></div>
+    </div>
+  </section>
 
+  <section id="publications">
+    <div class="sh reveal"><span class="sn">04</span><h2 class="st">Publications</h2></div>
+    <div class="pub-item reveal"><span class="pv">Interspeech 2025</span><span class="pt">The NaijaVoices Dataset: Cultivating Large-Scale, High-Quality, Culturally-Rich Speech Data for African Languages</span></div>
+    <div class="pub-item reveal"><span class="pv">DataCamp</span><span class="pt">Optuna for Deep Reinforcement Learning</span></div>
+    <div class="pub-item reveal"><span class="pv">DataCamp</span><span class="pt">Structural Equation Modelling</span></div>
+    <div class="pub-item reveal"><span class="pv">Kaggle</span><span class="pt">Principles vs Implementation: AI Ethics</span></div>
+    <div class="pub-item reveal"><span class="pv">Neptune.ai</span><span class="pt">Best Tools For Model Tuning and Hyperparameter Optimization</span></div>
+  </section>
+
+  <section id="speaking">
+    <div class="sh reveal"><span class="sn">05</span><h2 class="st">Speaking</h2></div>
+    <div class="talk-grid">
+      <div class="tc reveal"><div class="te">AMLD Africa</div><div class="td">Jan 2026 · South Africa</div><div class="tt">"Sovereignty is a Pipe Dream Without Pipelines: A Builder's Manifesto"</div></div>
+      <div class="tc reveal"><div class="te">TEDx Ayobo</div><div class="td">Jan 2026 · Lagos</div><div class="tt">"From Users to Makers: Inspiring the Next Generation of Tech Creators"</div></div>
+      <div class="tc reveal"><div class="te">Python Summit</div><div class="td">Dec 2025 · Warsaw, Poland</div><div class="tt">"Agent Teaming in Mixed Motive Environments: Learning to Collaborate Amid Conflicting Goals"</div></div>
+      <div class="tc reveal"><div class="te">ML Lagos 2025</div><div class="td">Oct 2025 · Virtual</div><div class="tt">"Human-Centred Evaluation for AI"</div></div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <div class="sh reveal"><span class="sn">06</span><h2 class="st">Honours &amp; Awards</h2></div>
+
+    <!-- Featured achievements -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+      <div class="aw reveal" style="border-left:3px solid var(--terracotta); background:linear-gradient(135deg, rgba(107,45,107,0.05), transparent);">
+        <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--terracotta); margin-bottom:0.5rem;">✦ 2025</div>
+        <div class="aw-name">ELLIS PhD Programme 2025 — Shortlisted</div>
+        <div class="aw-desc">Shortlisted in the top 400 out of over 6,000 applicants for one of Europe's most prestigious AI doctoral programmes, recognising exceptional research potential across the continent.</div>
+      </div>
+      <div class="aw reveal" style="border-left:3px solid var(--gold); background:linear-gradient(135deg, rgba(184,115,51,0.05), transparent);">
+        <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;">✦ Mar 2026 · Switzerland</div>
+        <div class="aw-name">Research Internship — LiGHT, EPFL</div>
+        <div class="aw-desc">Selected for a research internship at the Laboratory for Intelligent Global Health Technologies at EPFL, Lausanne.</div>
+      </div>
+    </div>
+
+    <div class="awards-grid">
+      <div class="aw reveal"><div class="aw-name">Research Grant — £70,000</div><div class="aw-desc">French Embassy Fund · Plastic waste identification &amp; transformation (Nov 2024)</div></div>
+      <div class="aw reveal"><div class="aw-name">Black in AI Emerging Leaders</div><div class="aw-desc">Top 127 from 590+ global applications</div></div>
+      <div class="aw reveal"><div class="aw-name">NASA Space Apps Global Finalist</div><div class="aw-desc">Top 10 globally out of 3,000+ participants (Oct 2022)</div></div>
+      <div class="aw reveal"><div class="aw-name">Miss Algorithm</div><div class="aw-desc">Top female AI expert, DSN AI Bootcamp (Nov 2022)</div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sh reveal"><span class="sn">07</span><h2 class="st">Contact</h2></div>
+    <div class="contact-cols">
+      <div class="reveal"><h2 class="ch">Let's build something <em>meaningful</em> together.</h2><p class="cd">Open to AI engineering roles, research collaborations, and speaking invitations — especially at the intersection of African AI, responsible systems, and frontier NLP.</p></div>
+      <div class="clinks reveal">
+        <div class="crow"><span class="ck">Email</span><a href="mailto:akinremibunmi111@gmail.com" class="cv">akinremibunmi111@gmail.com</a></div>
+        <div class="crow"><span class="ck">LinkedIn</span><a href="https://linkedin.com/in/bunmi-akinremi" target="_blank" class="cv">bunmi-akinremi</a></div>
+        <div class="crow"><span class="ck">GitHub</span><a href="https://github.com/bumie-e" target="_blank" class="cv">@bumie-e</a></div>
+        <div class="crow"><span class="ck">Twitter / X</span><a href="https://twitter.com/bumie_rose" target="_blank" class="cv">@bumie_rose</a></div>
+      </div>
+    </div>
+  </section>
+  <footer><p>© 2026 Olubunmi Akinremi</p><p>Lagos, Nigeria</p></footer>
+
+  <script>
+    const obs = new IntersectionObserver(entries => entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } }), {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
