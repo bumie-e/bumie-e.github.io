@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Bunmi Akinremi</title>
+  <title data-cid="contact_title">Contact — Bunmi Akinremi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo">Bunmi Akinremi</a>
+    <a href="index.html" class="nav-logo" data-cid="shared_nav_logo"></a>
     <ul class="nav-links">
-      <li><a href="index.html#news">News</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="speaking.html">Speaking</a></li>
-      <li><a href="side-quests.html" class="nav-orange">Side Quests</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="index.html#news" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" class="nav-orange" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" class="active" data-cid="shared_nav_contact"></a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -25,35 +25,35 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html#news" onclick="toggleMenu()">News</a></li>
-      <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
-      <li><a href="videos.html" onclick="toggleMenu()">Videos</a></li>
-      <li><a href="speaking.html" onclick="toggleMenu()">Speaking</a></li>
-      <li><a href="side-quests.html" onclick="toggleMenu()">Side Quests</a></li>
-      <li><a href="about.html" onclick="toggleMenu()">About</a></li>
-      <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+      <li><a href="index.html#news" onclick="toggleMenu()" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" onclick="toggleMenu()" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" onclick="toggleMenu()" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" onclick="toggleMenu()" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" onclick="toggleMenu()" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" onclick="toggleMenu()" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" onclick="toggleMenu()" data-cid="shared_nav_contact"></a></li>
     </ul>
   </div>
 
   <div class="page-hero">
-    <p class="page-crumb">Bunmi Akinremi</p>
-    <h1 class="page-title">Let's build something<br><em>meaningful.</em></h1>
-    <p class="page-desc">Open to AI engineering roles, research collaborations, and speaking invitations — especially at the intersection of African AI and responsible systems.</p>
+    <p class="page-crumb" data-cid="contact_crumb"></p>
+    <h1 class="page-title" data-cid="contact_page_title"></h1>
+    <p class="page-desc" data-cid="contact_page_desc"></p>
   </div>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="sh reveal"><span class="sn">—</span><h2 class="st">Get In Touch</h2></div>
+    <div class="sh reveal"><span class="sn">—</span><h2 class="st" data-cid="contact_heading"></h2></div>
     <div class="contact-cols">
       <div class="reveal">
-        <p class="cd" style="margin-bottom:1.5rem;">I'm always happy to talk about potential collaborations, research ideas, speaking engagements, or just to connect with people doing interesting work in AI.</p>
-        <p class="cd">The best way to reach me is email. I try to respond within a few days.</p>
+        <p class="cd" style="margin-bottom:1.5rem;" data-cid="contact_para_1"></p>
+        <p class="cd" data-cid="contact_para_2"></p>
       </div>
       <div class="clinks reveal">
-        <div class="crow"><span class="ck">Email</span><a href="mailto:akinremibunmi111@gmail.com" class="cv">akinremibunmi111@gmail.com</a></div>
-        <div class="crow"><span class="ck">LinkedIn</span><a href="https://linkedin.com/in/bunmi-akinremi" target="_blank" class="cv">bunmi-akinremi</a></div>
-        <div class="crow"><span class="ck">GitHub</span><a href="https://github.com/bumie-e" target="_blank" class="cv">@bumie-e</a></div>
-        <div class="crow"><span class="ck">Twitter / X</span><a href="https://twitter.com/bumie_rose" target="_blank" class="cv">@bumie_rose</a></div>
+        <div class="crow"><span class="ck" data-cid="contact_email_label"></span><a href="mailto:akinremibunmi111@gmail.com" class="cv">akinremibunmi111@gmail.com</a></div>
+        <div class="crow"><span class="ck" data-cid="contact_linkedin_label"></span><a href="https://linkedin.com/in/bunmi-akinremi" target="_blank" class="cv">bunmi-akinremi</a></div>
+        <div class="crow"><span class="ck" data-cid="contact_github_label"></span><a href="https://github.com/bumie-e" target="_blank" class="cv">@bumie-e</a></div>
+        <div class="crow"><span class="ck" data-cid="contact_twitter_label"></span><a href="https://twitter.com/bumie_rose" target="_blank" class="cv">@bumie_rose</a></div>
       </div>
     </div>
   </section>
@@ -62,21 +62,22 @@
   <div id="newsletter" class="newsletter-wrap">
     <div class="sh reveal">
       <span class="sn">—</span>
-      <h2 class="st">Newsletter</h2>
+      <h2 class="st" data-cid="newsletter_heading"></h2>
     </div>
-    <p class="nl-desc reveal">Occasional notes on AI research, building in public, African tech, and things I'm learning. No spam — only when I have something worth saying.</p>
+    <p class="nl-desc reveal" data-cid="newsletter_desc"></p>
     <form class="nl-form reveal" onsubmit="handleSubscribe(event)">
-      <input type="email" class="nl-input" placeholder="your@email.com" required />
-      <button class="nl-btn" type="submit">Subscribe</button>
+      <input type="email" class="nl-input" data-cid-placeholder="newsletter_placeholder" required />
+      <button class="nl-btn" type="submit" data-cid="newsletter_btn"></button>
     </form>
-    <p class="nl-note reveal">No spam · Unsubscribe any time</p>
+    <p class="nl-note reveal" data-cid="newsletter_note"></p>
   </div>
 
   <footer>
-    <p>© 2026 Olubunmi Akinremi</p>
-    <p>Lagos, Nigeria</p>
+    <p data-cid="shared_footer_copy"></p>
+    <p data-cid="shared_footer_loc"></p>
   </footer>
 
+  <script src="content.js"></script>
   <script>
     const obs = new IntersectionObserver(entries =>
       entries.forEach((e, i) => {
