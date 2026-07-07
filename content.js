@@ -29,7 +29,7 @@ const CONTENT = {
   home_title:          "Bunmi Akinremi. AI Engineer · Researcher · Speaker",
   home_hero_eyebrow:   "AI Engineer · Researcher · Speaker · Builder",
   home_hero_name:      "Bunmi<br><em>Akinremi</em>",
-  home_hero_subtitle:  "Building intelligent systems at the frontier of RL, MLOps &amp; GenAI",
+  home_hero_subtitle:  "Building intelligent systems at the frontier of RL, Gen AI, &amp; MLOps",
   home_hero_body:      "Research Fellow @LiGHT · Member @IEEE P4011 · Adjunct Faculty at Pan-Atlantic University · ELLIS 2025 PhD Shortlistee.",
   home_cta_work:       "View My Work",
   home_cta_blog:       "Read My Blog",
@@ -43,9 +43,14 @@ const CONTENT = {
   // — News items —
   home_news_heading: "What's New",
 
+  home_news_0_date:  "Jun 2026",
+  home_news_0_badge: "New",
+  home_news_0_text:  "<strong>Started Cofounder role at Divas in AI</strong>. Amplifying the efforts to train and mentor young women in AI skills.",
+
+
   home_news_1_date:  "Jun 2026",
   home_news_1_badge: "New",
-  home_news_1_text:  "<strong>Started Research Fellowship at LiGHT, EPFL, Switzerland</strong> — joining the Laboratory for Intelligent Global Health Technologies to work at the intersection of AI and global health impact.",
+  home_news_1_text:  "<strong>Started Research Fellowship at LiGHT, EPFL, Switzerland</strong>. Joining the Laboratory for Intelligent Global Health Technologies to work at the intersection of AI and global health impact.",
 
   home_news_2_date:  "May 2026",
   home_news_2_badge: "Position",
@@ -57,7 +62,7 @@ const CONTENT = {
 
   home_news_4_date:  "Jan 2026",
   home_news_4_badge: "Speaking",
-  home_news_4_text:  "Spoke at <strong>AMLD Africa</strong> (Kigali) and <strong>TEDx Ayobo</strong> (Lagos) within the same month — two stages, two continents, one message.",
+  home_news_4_text:  "Spoke at <strong>AMLD Africa</strong> (South Africa) and <strong>TEDx Ayobo</strong> (Lagos) within the same month. Two stages, two countries, one message.",
 
   home_news_5_date:  "Jan 2026",
   home_news_5_badge: "Position",
@@ -87,31 +92,31 @@ const CONTENT = {
   home_feat_2_label: "Thinking About Thinking",
   home_feat_2_org:   "Thinking About Thinking",
   home_feat_2_date:  "Apr 2026 · AE Global Summit, London",
-  home_feat_2_quote: "\"I've been selected as a <strong>Thinking About Thinking Ambassador for 2026</strong> — supporting thoughtful, responsible discussion around AI, including the AE Global Summit on Open Problems for AI in London, Nov 2026.\"",
+  home_feat_2_quote: "\"I've been selected as a <strong>Thinking About Thinking Ambassador for 2026</strong>. Supporting thoughtful, responsible discussion around AI, including the AE Global Summit on Open Problems for AI in London, Nov 2026.\"",
   home_feat_2_tag:   "Ambassador",
 
   home_feat_3_label: "ONE DEV Africa",
   home_feat_3_org:   "ONE DEV Africa",
   home_feat_3_date:  "Apr 2026 · International Women's Month",
-  home_feat_3_quote: "\"We celebrate <strong>40 incredible women developers across Africa</strong> — women who are building, solving real problems, and contributing to a global digital economy that often overlooks them.\" <em>311 reactions.</em>",
+  home_feat_3_quote: "\"We celebrate <strong>40 incredible women developers across Africa</strong>. Women who are building, solving real problems, and contributing to a global digital economy that often overlooks them.\" <em>311 reactions.</em>",
   home_feat_3_tag:   "Women in Tech Feature",
 
   home_feat_4_label: "IndabaX Uganda",
   home_feat_4_org:   "IndabaX Uganda",
   home_feat_4_date:  "Mar 2026 · Deep Learning Indaba X",
-  home_feat_4_quote: "\"Celebrating the women shaping the future of AI in Africa. This #InternationalWomensDay, we spotlight the brilliant women speaking at <strong>Deep Learning Indaba X Uganda 2026</strong> — researchers, innovators, and leaders driving responsible AI forward.\"",
+  home_feat_4_quote: "\"Celebrating the women shaping the future of AI in Africa. This #InternationalWomensDay, we spotlight the brilliant women speaking at <strong>Deep Learning Indaba X Uganda 2026</strong>. Researchers, innovators, and leaders driving responsible AI forward.\"",
   home_feat_4_tag:   "Women in AI · Speaker",
 
   home_feat_5_label: "WiMLDS Lagos",
   home_feat_5_org:   "WiMLDS Lagos",
   home_feat_5_date:  "2025 · Personality of the Month",
-  home_feat_5_quote: "\"<strong>Bunmi Akinremi</strong> is a brilliant mind passionate about research and building intelligent systems, who blends technical depth with creative flair — demonstrating that data science and storytelling can coexist.\"",
+  home_feat_5_quote: "\"<strong>Bunmi Akinremi</strong> is a brilliant mind passionate about research and building intelligent systems, who blends technical depth with creative flair, demonstrating that data science and storytelling can coexist.\"",
   home_feat_5_tag:   "Personality of the Month",
 
   home_feat_6_label: "Nigerians in AI",
   home_feat_6_org:   "Nigerians in AI",
   home_feat_6_date:  "Mar 2026 · AI Innovation Wednesday",
-  home_feat_6_quote: "\"An <strong>AI researcher and engineer building technology that actually serves people</strong> — deploying production-grade ML systems, contributing to AI governance and ethics, and mentoring African ML researchers.\" <em>298 reactions.</em>",
+  home_feat_6_quote: "\"An <strong>AI researcher and engineer building technology that actually serves people</strong>. Deploying production-grade ML systems, contributing to AI governance and ethics, and mentoring African ML researchers.\" <em>298 reactions.</em>",
   home_feat_6_tag:   "AI Leader Feature",
 
   home_feat_7_label: "Carpe Datum Podcast",
@@ -133,12 +138,12 @@ const CONTENT = {
   // ═══════════════════════════════════════════════════════════════
   // ABOUT — about.html
   // ═══════════════════════════════════════════════════════════════
-  about_title:      "About — Bunmi Akinremi",
+  about_title:      "About Bunmi Akinremi",
   about_crumb:      "Bunmi Akinremi",
   about_page_title: "About",
   about_page_desc:  "Background, experience, publications, awards, and CV — everything in one place.",
 
-  about_who_heading: "Who I Am",
+  about_who_heading: "Who Am I?",
   about_bio_1: "I'm an AI Engineer specialising in NLP, ads analytics, statistical modelling, and responsible AI. Currently I work as AI Engineer at <strong>Bfree Africa</strong>, building intelligent systems for financial services, and as Adjunct Faculty at <strong>Pan-Atlantic University</strong>. In June 2026, I begin a research internship at <strong>LiGHT, EPFL</strong> in Switzerland — and I've been shortlisted for the prestigious <strong>ELLIS PhD Programme</strong>, one of Europe's most competitive doctoral tracks in AI.",
   about_bio_2: "My research in reinforcement learning explores how agents learn to collaborate in mixed-motive environments — theory, ethics, and real-world deployment in one question. I've spoken at AMLD Africa, TEDx, Python Summit Warsaw, and ML Lagos, and I review papers for ICLR and ECCV workshops.",
   about_bio_3: "Being introverted has shaped how deliberately I communicate and how deeply I think. Quiet confidence, consequential work.",
@@ -216,11 +221,11 @@ const CONTENT = {
   about_award_f1_desc: "Top 400 out of 6,000+ applicants for one of Europe's most prestigious AI doctoral programmes.",
 
   about_award_f2_year: "2026 · Lausanne, Switzerland",
-  about_award_f2_name: "Research Internship — LiGHT, EPFL",
+  about_award_f2_name: "Research Internship &amp; LiGHT, EPFL",
   about_award_f2_desc: "Selected for a research internship at EPFL's Laboratory for Intelligent Global Health Technologies.",
 
   about_award_1_year: "Nov 2024",
-  about_award_1_name: "Research Grant — £70,000",
+  about_award_1_name: "Research Grant £70k",
   about_award_1_desc: "French Embassy Fund · Plastic waste identification &amp; transformation",
 
   about_award_2_year: "2024",
