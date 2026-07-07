@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-cid="about_title">About — Bunmi Akinremi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo" data-cid="shared_nav_logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#news" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" class="nav-orange" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" class="active" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" data-cid="shared_nav_contact"></a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#news" onclick="toggleMenu()" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" onclick="toggleMenu()" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" onclick="toggleMenu()" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" onclick="toggleMenu()" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" onclick="toggleMenu()" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" onclick="toggleMenu()" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" onclick="toggleMenu()" data-cid="shared_nav_contact"></a></li>
+    </ul>
+  </div>
+
+  <div class="page-hero">
+    <p class="page-crumb" data-cid="about_crumb"></p>
+    <h1 class="page-title" data-cid="about_page_title"></h1>
+    <p class="page-desc" data-cid="about_page_desc"></p>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sh reveal"><span class="sn">—</span><h2 class="st" data-cid="about_who_heading"></h2></div>
+    <div class="about-cols">
+      <div class="about-text reveal">
+        <p data-cid="about_bio_1"></p>
+        <p data-cid="about_bio_2"></p>
+        <p data-cid="about_bio_3"></p>
+      </div>
+      <div class="sidebar-box reveal">
+        <h3 data-cid="about_skills_heading"></h3>
+        <div class="skill-cat">
+          <div class="skill-cat-name" data-cid="about_skill_nlp_name"></div>
+          <div class="tags" data-cid="about_skill_nlp_tags"></div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-name" data-cid="about_skill_mlops_name"></div>
+          <div class="tags" data-cid="about_skill_mlops_tags"></div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-name" data-cid="about_skill_rai_name"></div>
+          <div class="tags" data-cid="about_skill_rai_tags"></div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-name" data-cid="about_skill_lang_name"></div>
+          <div class="tags" data-cid="about_skill_lang_tags"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="alt">
+    <div class="sh reveal"><span class="sn">—</span><h2 class="st" data-cid="about_exp_heading"></h2></div>
+
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_1_date"></div><div class="em-company" data-cid="about_exp_1_company"></div><div class="em-loc" data-cid="about_exp_1_loc"></div></div>
+      <div><div class="ec-role" data-cid="about_exp_1_role"></div><ul class="ec-bullets" data-cid="about_exp_1_bullets"></ul></div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_2_date"></div><div class="em-company" data-cid="about_exp_2_company"></div><div class="em-loc" data-cid="about_exp_2_loc"></div></div>
+      <div><div class="ec-role" data-cid="about_exp_2_role"></div><ul class="ec-bullets" data-cid="about_exp_2_bullets"></ul></div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_3_date"></div><div class="em-company" data-cid="about_exp_3_company"></div><div class="em-loc" data-cid="about_exp_3_loc"></div></div>
+      <div><div class="ec-role" data-cid="about_exp_3_role"></div><ul class="ec-bullets" data-cid="about_exp_3_bullets"></ul></div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_4_date"></div><div class="em-company" data-cid="about_exp_4_company"></div><div class="em-loc" data-cid="about_exp_4_loc"></div></div>
+      <div>
+        <div class="ec-role" data-cid="about_exp_4_role"></div>
+        <ul class="ec-bullets" data-cid="about_exp_4_bullets"></ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_5_date"></div><div class="em-company" data-cid="about_exp_5_company"></div><div class="em-loc" data-cid="about_exp_5_loc"></div></div>
+      <div>
+        <div class="ec-role" data-cid="about_exp_5_role"></div>
+        <ul class="ec-bullets" data-cid="about_exp_5_bullets"></ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="em-date" data-cid="about_exp_6_date"></div><div class="em-company" data-cid="about_exp_6_company"></div><div class="em-loc" data-cid="about_exp_6_loc"></div></div>
+      <div>
+        <div class="ec-role" data-cid="about_exp_6_role"></div>
+        <ul class="ec-bullets" data-cid="about_exp_6_bullets"></ul>
+      </div>
+    </div>
+
+    <div class="cv-banner reveal">
+      <div><p data-cid="about_cv_text"></p></div>
+      <a href="#" class="btn-primary" data-cid="about_cv_btn"></a>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="sh reveal"><span class="sn">—</span><h2 class="st" data-cid="about_pubs_heading"></h2></div>
+    <div class="pub-item reveal"><span class="pv" data-cid="about_pub_1_venue"></span><span class="pt" data-cid="about_pub_1_title"></span></div>
+    <div class="pub-item reveal"><span class="pv" data-cid="about_pub_2_venue"></span><span class="pt" data-cid="about_pub_2_title"></span></div>
+    <div class="pub-item reveal"><span class="pv" data-cid="about_pub_3_venue"></span><span class="pt" data-cid="about_pub_3_title"></span></div>
+    <div class="pub-item reveal"><span class="pv" data-cid="about_pub_4_venue"></span><span class="pt" data-cid="about_pub_4_title"></span></div>
+    <div class="pub-item reveal"><span class="pv" data-cid="about_pub_5_venue"></span><span class="pt" data-cid="about_pub_5_title"></span></div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards" class="alt">
+    <div class="sh reveal"><span class="sn">—</span><h2 class="st" data-cid="about_awards_heading"></h2></div>
+    <div class="featured-awards">
+      <div class="aw featured reveal">
+        <div class="aw-year" data-cid="about_award_f1_year"></div>
+        <div class="aw-name" data-cid="about_award_f1_name"></div>
+        <div class="aw-desc" data-cid="about_award_f1_desc"></div>
+      </div>
+      <div class="aw featured reveal">
+        <div class="aw-year" data-cid="about_award_f2_year"></div>
+        <div class="aw-name" data-cid="about_award_f2_name"></div>
+        <div class="aw-desc" data-cid="about_award_f2_desc"></div>
+      </div>
+    </div>
+    <div class="awards-grid">
+      <div class="aw reveal"><div class="aw-year" data-cid="about_award_1_year"></div><div class="aw-name" data-cid="about_award_1_name"></div><div class="aw-desc" data-cid="about_award_1_desc"></div></div>
+      <div class="aw reveal"><div class="aw-year" data-cid="about_award_2_year"></div><div class="aw-name" data-cid="about_award_2_name"></div><div class="aw-desc" data-cid="about_award_2_desc"></div></div>
+      <div class="aw reveal"><div class="aw-year" data-cid="about_award_3_year"></div><div class="aw-name" data-cid="about_award_3_name"></div><div class="aw-desc" data-cid="about_award_3_desc"></div></div>
+      <div class="aw reveal"><div class="aw-year" data-cid="about_award_4_year"></div><div class="aw-name" data-cid="about_award_4_name"></div><div class="aw-desc" data-cid="about_award_4_desc"></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-cid="shared_footer_copy"></p>
+    <p data-cid="shared_footer_loc"></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script>
+    const obs = new IntersectionObserver(entries =>
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 70);
+          obs.unobserve(e.target);
+        }
+      }), { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  </script>
+</body>
+</html>

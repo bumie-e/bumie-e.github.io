@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-cid="sq_title">Side Quests — Bunmi Akinremi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo" data-cid="shared_nav_logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#news" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" class="nav-orange active" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" data-cid="shared_nav_contact"></a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#news" onclick="toggleMenu()" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" onclick="toggleMenu()" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" onclick="toggleMenu()" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" onclick="toggleMenu()" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" onclick="toggleMenu()" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" onclick="toggleMenu()" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" onclick="toggleMenu()" data-cid="shared_nav_contact"></a></li>
+    </ul>
+  </div>
+
+  <div class="page-hero">
+    <p class="page-crumb" data-cid="sq_crumb"></p>
+    <h1 class="page-title" data-cid="sq_page_title"></h1>
+    <p class="page-desc" data-cid="sq_page_desc"></p>
+  </div>
+
+  <section>
+    <div class="sh reveal">
+      <span class="sn">—</span>
+      <h2 class="st" data-cid="sq_section_heading"></h2>
+      <span class="sq-label" data-cid="sq_section_label"></span>
+    </div>
+    <div class="sq-grid">
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_1_icon"></div>
+        <div class="sq-name" data-cid="sq_1_name"></div>
+        <div class="sq-status" data-cid="sq_1_status"></div>
+        <p class="sq-desc" data-cid="sq_1_desc"></p>
+      </div>
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_2_icon"></div>
+        <div class="sq-name" data-cid="sq_2_name"></div>
+        <div class="sq-status" data-cid="sq_2_status"></div>
+        <p class="sq-desc" data-cid="sq_2_desc"></p>
+      </div>
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_3_icon"></div>
+        <div class="sq-name" data-cid="sq_3_name"></div>
+        <div class="sq-status" data-cid="sq_3_status"></div>
+        <p class="sq-desc" data-cid="sq_3_desc"></p>
+      </div>
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_4_icon"></div>
+        <div class="sq-name" data-cid="sq_4_name"></div>
+        <div class="sq-status" data-cid="sq_4_status"></div>
+        <p class="sq-desc" data-cid="sq_4_desc"></p>
+      </div>
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_5_icon"></div>
+        <div class="sq-name" data-cid="sq_5_name"></div>
+        <div class="sq-status" data-cid="sq_5_status"></div>
+        <p class="sq-desc" data-cid="sq_5_desc"></p>
+      </div>
+      <div class="sq-card reveal">
+        <div class="sq-icon" data-cid="sq_6_icon"></div>
+        <div class="sq-name" data-cid="sq_6_name"></div>
+        <div class="sq-status" data-cid="sq_6_status"></div>
+        <p class="sq-desc" data-cid="sq_6_desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-cid="shared_footer_copy"></p>
+    <p data-cid="shared_footer_loc"></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script>
+    const obs = new IntersectionObserver(entries =>
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 70);
+          obs.unobserve(e.target);
+        }
+      }), { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  </script>
+</body>
+</html>

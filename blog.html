@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-cid="blog_title">Blog — Bunmi Akinremi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo" data-cid="shared_nav_logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#news" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" class="active" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" class="nav-orange" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" data-cid="shared_nav_contact"></a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#news" onclick="toggleMenu()" data-cid="shared_nav_news"></a></li>
+      <li><a href="blog.html" onclick="toggleMenu()" data-cid="shared_nav_blog"></a></li>
+      <li><a href="videos.html" onclick="toggleMenu()" data-cid="shared_nav_videos"></a></li>
+      <li><a href="speaking.html" onclick="toggleMenu()" data-cid="shared_nav_speaking"></a></li>
+      <li><a href="side-quests.html" onclick="toggleMenu()" data-cid="shared_nav_side_quests"></a></li>
+      <li><a href="about.html" onclick="toggleMenu()" data-cid="shared_nav_about"></a></li>
+      <li><a href="contact.html" onclick="toggleMenu()" data-cid="shared_nav_contact"></a></li>
+    </ul>
+  </div>
+
+  <div class="page-hero">
+    <p class="page-crumb" data-cid="blog_crumb"></p>
+    <h1 class="page-title" data-cid="blog_page_title"></h1>
+    <p class="page-desc" data-cid="blog_page_desc"></p>
+  </div>
+
+  <section>
+    <div class="blog-grid">
+      <a href="https://medium.com/@akinremibunmi111/on-teaching-minds-and-building-machines-notes-from-a-lecturer-and-ai-engineer-60cca4bc643b" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_1_tag"></div>
+        <div class="blog-title" data-cid="blog_1_title"></div>
+        <p class="blog-excerpt" data-cid="blog_1_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_1_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/still-scaling-statistical-models-in-the-age-of-ai-e0043dda3049" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_2_tag"></div>
+        <div class="blog-title" data-cid="blog_2_title"></div>
+        <p class="blog-excerpt" data-cid="blog_2_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_2_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/my-ml-engineering-journey-insights-challenges-and-lessons-learned-f09cb331cce7" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_3_tag"></div>
+        <div class="blog-title" data-cid="blog_3_title"></div>
+        <p class="blog-excerpt" data-cid="blog_3_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_3_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/access-what-happens-when-opportunities-are-not-enough-ed70ec690098" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_4_tag"></div>
+        <div class="blog-title" data-cid="blog_4_title"></div>
+        <p class="blog-excerpt" data-cid="blog_4_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_4_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/speaking-at-a-global-data-science-conference-in-belgrade-europe-my-experience-d3eb0dc4a484" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_5_tag"></div>
+        <div class="blog-title" data-cid="blog_5_title"></div>
+        <p class="blog-excerpt" data-cid="blog_5_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_5_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/speaking-at-a-global-data-science-conference-in-belgrade-europe-the-episodes-c51919c4e61e" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_6_tag"></div>
+        <div class="blog-title" data-cid="blog_6_title"></div>
+        <p class="blog-excerpt" data-cid="blog_6_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_6_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/technologies-changing-the-way-we-work-ad91c7d3fa3f" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_7_tag"></div>
+        <div class="blog-title" data-cid="blog_7_title"></div>
+        <p class="blog-excerpt" data-cid="blog_7_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_7_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/cometheartbeat/how-to-identify-nigerian-dishes-using-artificial-intelligence-on-android-devices-part-1-4ca03f1c656a" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_8_tag"></div>
+        <div class="blog-title" data-cid="blog_8_title"></div>
+        <p class="blog-excerpt" data-cid="blog_8_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_8_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/cometheartbeat/how-to-identify-nigerian-dishes-using-artificial-intelligence-on-android-devices-part-2-133dcac3a89d" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_9_tag"></div>
+        <div class="blog-title" data-cid="blog_9_title"></div>
+        <p class="blog-excerpt" data-cid="blog_9_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_9_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/nasa-space-apps-challenge-my-hackathon-saga-453dd3ff201d" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_10_tag"></div>
+        <div class="blog-title" data-cid="blog_10_title"></div>
+        <p class="blog-excerpt" data-cid="blog_10_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_10_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/a-psych-view-of-2022-a-poetic-developer-tales-e1030308c816" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_11_tag"></div>
+        <div class="blog-title" data-cid="blog_11_title"></div>
+        <p class="blog-excerpt" data-cid="blog_11_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_11_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/creating-intents-for-your-chatbot-using-rasa-nlu-1c2b9e695e17" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_12_tag"></div>
+        <div class="blog-title" data-cid="blog_12_title"></div>
+        <p class="blog-excerpt" data-cid="blog_12_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_12_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/@akinremibunmi111/thinking-of-building-a-chatbot-here-are-a-few-things-to-know-before-getting-started-37d79cda5234" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_13_tag"></div>
+        <div class="blog-title" data-cid="blog_13_title"></div>
+        <p class="blog-excerpt" data-cid="blog_13_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_13_source"></span><span>↗ Read</span></div>
+      </a>
+      <a href="https://medium.com/aiplusoau/getting-started-with-numpy-and-pandas-bc80de19536e" target="_blank" rel="noopener" class="blog-card reveal">
+        <div class="blog-tag" data-cid="blog_14_tag"></div>
+        <div class="blog-title" data-cid="blog_14_title"></div>
+        <p class="blog-excerpt" data-cid="blog_14_excerpt"></p>
+        <div class="blog-meta"><span data-cid="blog_14_source"></span><span>↗ Read</span></div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p data-cid="shared_footer_copy"></p>
+    <p data-cid="shared_footer_loc"></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script>
+    const obs = new IntersectionObserver(entries =>
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 70);
+          obs.unobserve(e.target);
+        }
+      }), { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  </script>
+</body>
+</html>
