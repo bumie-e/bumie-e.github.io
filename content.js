@@ -37,48 +37,52 @@ const CONTENT = {
 
   home_stat_1_n: "3+",      home_stat_1_l: "Years in Production ML",
   home_stat_2_n: "£70k",    home_stat_2_l: "Research Grant Awarded",
-  home_stat_3_n: "Top 10",  home_stat_3_l: "NASA Space Apps Globally",
+  home_stat_3_n: "Top 30",  home_stat_3_l: "NASA Space Apps Globally",
   home_stat_4_n: "5+",      home_stat_4_l: "Publications &amp; Articles",
 
   // — News items —
   home_news_heading: "What's New",
 
-  home_news_0_date:  "Jun 2026",
+  home_news_0_date:  "August 2026",
   home_news_0_badge: "New",
-  home_news_0_text:  "<strong>Started Cofounder role at Divas in AI</strong>. Amplifying the efforts to train and mentor young women in AI skills.",
-
+  home_news_0_text:  "<strong>Ended research felllowship @LiGHT </strong>. Moving on to new opportunities and challenges.",
 
   home_news_1_date:  "Jun 2026",
   home_news_1_badge: "New",
-  home_news_1_text:  "<strong>Started Research Fellowship at LiGHT, EPFL, Switzerland</strong>. Joining the Laboratory for Intelligent Global Health Technologies to work at the intersection of AI and global health impact.",
+  home_news_1_text:  "<strong>Started Cofounder role at Divas in AI</strong>. Amplifying the efforts to train and mentor young women in AI skills.",
 
-  home_news_2_date:  "May 2026",
+
+  home_news_2_date:  "Jun 2026",
   home_news_2_badge: "Position",
-  home_news_2_text:  "Left my position as <strong>AI Engineer at Bfree Africa</strong>.",
+  home_news_2_text:  "<strong>Started Research Fellowship at LiGHT, EPFL, Switzerland</strong>. Joining the Laboratory for Intelligent Global Health Technologies to work at the intersection of AI and global health impact.",
 
   home_news_3_date:  "May 2026",
-  home_news_3_badge: "Guest Lecture",
-  home_news_3_text:  "Delivered a guest lecture on <strong>introduction to Reinforcement Learning</strong> at Namibia University.",
+  home_news_3_badge: "Position",
+  home_news_3_text:  "Left my position as <strong>AI Engineer at Bfree Africa</strong>.",
 
-  home_news_4_date:  "Jan 2026",
-  home_news_4_badge: "Speaking",
-  home_news_4_text:  "Spoke at <strong>AMLD Africa</strong> (South Africa) and <strong>TEDx Ayobo</strong> (Lagos) within the same month. Two stages, two countries, one message.",
+  home_news_4_date:  "May 2026",
+  home_news_4_badge: "Guest Lecture",
+  home_news_4_text:  "Delivered a guest lecture on <strong>introduction to Reinforcement Learning</strong> at Namibia University.",
 
   home_news_5_date:  "Jan 2026",
-  home_news_5_badge: "Position",
-  home_news_5_text:  "Started as <strong>AI Engineer at Bfree Africa</strong> and <strong>Adjunct Faculty at Pan-Atlantic University</strong> — building and teaching simultaneously.",
+  home_news_5_badge: "Speaking",
+  home_news_5_text:  "Spoke at <strong>AMLD Africa</strong> (South Africa) and <strong>TEDx Ayobo</strong> (Lagos) within the same month. Two stages, two countries, one message.",
 
-  home_news_6_date:  "2025",
-  home_news_6_badge: "Award",
-  home_news_6_text:  "<strong>ELLIS PhD Programme 2025 — Shortlisted.</strong> Top 400 out of 6,000+ applicants for Europe's most competitive AI doctoral programme.",
+  home_news_6_date:  "Jan 2026",
+  home_news_6_badge: "Position",
+  home_news_6_text:  "Started as <strong>AI Engineer at Bfree Africa</strong> and <strong>Adjunct Faculty at Pan-Atlantic University</strong> — building and teaching simultaneously.",
 
-  home_news_7_date:  "Dec 2025",
-  home_news_7_badge: "Speaking",
-  home_news_7_text:  "Presented <em>\"Agent Teaming in Mixed Motive Environments\"</em> at <strong>Python Summit Warsaw, Poland</strong>.",
+  home_news_7_date:  "2025",
+  home_news_7_badge: "Award",
+  home_news_7_text:  "<strong>ELLIS PhD Programme 2025 — Shortlisted.</strong> Top 400 out of 6,000+ applicants for Europe's most competitive AI doctoral programme.",
 
-  home_news_8_date:  "Nov 2024",
-  home_news_8_badge: "Grant",
-  home_news_8_text:  "Awarded <strong>£70,000 research grant</strong> from the French Embassy Fund for AI-powered plastic waste identification and transformation.",
+  home_news_8_date:  "Dec 2025",
+  home_news_8_badge: "Speaking",
+  home_news_8_text:  "Presented <em>\"Agent Teaming in Mixed Motive Environments\"</em> at <strong>Python Summit Warsaw, Poland</strong>.",
+
+  home_news_9_date:  "Nov 2024",
+  home_news_9_badge: "Grant",
+  home_news_9_text:  "Awarded <strong>£70,000 research grant</strong> from the French Embassy Fund for AI-powered plastic waste identification and transformation.",
 
   // — Featured In cards —
   home_featured_heading: "Featured In",
@@ -399,25 +403,25 @@ const CONTENT = {
   // ═══════════════════════════════════════════════════════════════
   // VIDEOS — videos.html
   // ═══════════════════════════════════════════════════════════════
-  videos_title:      "Videos — Bunmi Akinremi",
+  videos_title:      "Videos",
   videos_crumb:      "Bunmi Akinremi",
   videos_page_title: "Educational<br><em>Videos</em>",
-  videos_page_desc:  "Making frontier AI research accessible — especially for engineers on the African continent.",
+  videos_page_desc:  "Making frontier AI research accessible, especially for engineers on the African continent.",
 
   videos_section_heading: "YouTube Channel",
   videos_subscribe:       "Subscribe →",
 
-  videos_1_title: "Introduction to RLHF: Reinforcement Learning from Human Feedback",
+  videos_1_title: "Introduction to Probabilistic Machine Learning",
   videos_1_meta:  "Coming Soon · Educational Series",
-  videos_2_title: "Building a RAG System with LangChain and Azure OpenAI — Step by Step",
+  videos_2_title: "Python for Machine Learning: Linear Regression from Scratch",
   videos_2_meta:  "Coming Soon · Tutorial",
-  videos_3_title: "Responsible AI in Practice: Red Teaming Language Models",
+  videos_3_title: "Introduction to Quantum Computing",
   videos_3_meta:  "Coming Soon · Talk Recording",
-  videos_4_title: "Kubeflow Pipelines: From Local Notebook to Production ML",
+  videos_4_title: "Workshop: Hands on coding with Gemini CLI",
   videos_4_meta:  "Coming Soon · Tutorial",
-  videos_5_title: "Fine-Tuning Whisper for African Languages: A Practical Guide",
+  videos_5_title: "MLSA OAU: Tips for Winning Hackathons",
   videos_5_meta:  "Coming Soon · Tutorial",
-  videos_6_title: "Multi-Agent Systems Explained: Theory, Ethics, and Real-World Deployment",
+  videos_6_title: "Journey to Microsoft AI Engineer Certification: Prepare to develop AI solutions on Azure",
   videos_6_meta:  "Coming Soon · Lecture",
 
   // ═══════════════════════════════════════════════════════════════
